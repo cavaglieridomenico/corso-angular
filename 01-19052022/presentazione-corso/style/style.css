@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  background-color: #dfd6cb;
+  font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, “Roboto”, “Oxygen”,
+    “Ubuntu”, “Cantarell”, “Fira Sans”, “Droid Sans”, “Helvetica Neue”,
+    sans-serif;
+}
+.title {
+  text-align: center;
+  font-style: italic;
+  background-color: cyan;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 300px;
+  gap: 1em;
+  justify-content: center;
+}
+
+.card {
+  height: 10em;
+  background-color: cyan;
+  border-radius: 15px;
+  padding: 0.2em 1em;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 300px);
+  }
+}
+
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(3, 300px);
+  }
+}
+
+@media (min-width: 1400px) {
+  .grid {
+    grid-template-columns: repeat(4, 300px);
+  }
+}
