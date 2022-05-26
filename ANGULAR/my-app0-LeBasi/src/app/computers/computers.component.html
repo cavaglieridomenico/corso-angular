@@ -1,0 +1,27 @@
+<h1>Lista dei computers</h1>
+
+<p>Puldante con condizione</p>
+<button [disabled]="!permessoAggComputer">Aggiungi computer</button>
+
+<p>{{ permessoAggComputer }}</p>
+<!-- Oppure ma sconsigliato-->
+<p [innerText]="permessoAggComputer"></p>
+<h1>Event Binding</h1>
+<button [disabled]="!permessoAggComputer" (click)="onCreaComputer()">
+  Aggiungi computer
+</button>
+<!--
+EVENT BINDING CON PARAMETRI -->
+
+<h1>Evevt Binding con parametri</h1>
+<label>Nome PC:</label>
+<input type="text" (input)="onModificaComputer($event)" />
+{{ nomeComputer }}
+
+<!-- TWO WAY DATA BINDING -->
+<h1>TWO WAY DATA BINDIG</h1>
+<div class="dimensioni">
+  <label for="nomeComputer">Nome Computer</label>
+  <input type="text" [(ngModel)]="nomeComputer2" />
+  <p>Il nome del nuovo PC è {{ nomeComputer2 }}</p>
+</div>

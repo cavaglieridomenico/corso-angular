@@ -1,0 +1,11 @@
+p {
+  color: red;
+}
+.dimensioni {
+  width: 40%;
+  height: inherit;
+  border: 2px solid red;
+  padding: 1em;
+  margin: 1em;
+  float: left;
+}
