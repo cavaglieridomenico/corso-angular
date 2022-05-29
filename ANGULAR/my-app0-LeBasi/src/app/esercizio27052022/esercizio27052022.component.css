@@ -6,6 +6,12 @@ button {
   margin: 0 0.3em;
 }
 
+span {
+  display: block;
+  margin-top: 1em;
+}
+
 .message-to-user {
-  min-height: 2em;
+  min-height: 1em;
+  color: blue;
 }
