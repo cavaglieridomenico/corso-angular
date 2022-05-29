@@ -3,12 +3,16 @@
 }
 
 .divRicetta {
-  border: 1px solid lightgrey;
+  border: 3px solid lightgrey;
   height: auto;
   margin: 2%;
   padding: 3%;
 }
 
-span {
-  margin-right: 0.2em;
+div.allergeni {
+  margin: 1em 0;
+}
+
+span.allergeni {
+  margin-right: 0.3em;
 }
