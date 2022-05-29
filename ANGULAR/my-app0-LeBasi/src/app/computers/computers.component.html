@@ -25,3 +25,13 @@ EVENT BINDING CON PARAMETRI -->
   <input type="text" [(ngModel)]="nomeComputer2" />
   <p>Il nome del nuovo PC è {{ nomeComputer2 }}</p>
 </div>
+
+<!-- FOR -->
+<div>
+  <h1>Lista Computers</h1>
+  <ul *ngFor="let computer of computers">
+    <li>{{ computer }}</li>
+  </ul>
+</div>
+<!-- FOR COMPONENT -->
+<app-computer *ngFor="let computer of computers"></app-computer>

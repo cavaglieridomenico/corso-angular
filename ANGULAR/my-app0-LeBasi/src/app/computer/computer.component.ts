@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ComputerComponent implements OnInit {
   computerID = 2;
   computerStatus;
+
+  computerCreated = true;
   constructor() {
     this.computerStatus = Math.random() > 0.5 ? 'OnLine' : 'OffLine';
   }

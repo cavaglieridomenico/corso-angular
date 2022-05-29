@@ -1,0 +1,11 @@
+label {
+  display: block;
+}
+
+button {
+  margin: 0 0.3em;
+}
+
+.message-to-user {
+  min-height: 2em;
+}
