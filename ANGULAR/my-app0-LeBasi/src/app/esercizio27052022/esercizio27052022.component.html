@@ -1,8 +1,10 @@
 <div class="container">
-  <label for="name">Yuor name</label>
+  <label for="name">Write something</label>
   <input id="name" type="text" [(ngModel)]="name" />
   <button type="button" [disabled]="!name" (click)="onReset()">Reaet</button>
   <button type="button" [disabled]="!name" (click)="name = ''">Reaet</button>
+  <span>String interpolation:</span>
   <p class="message-to-user">{{ name }}</p>
+  <span>Property Binding:</span>
   <p class="message-to-user" [innerText]="name"></p>
 </div>
