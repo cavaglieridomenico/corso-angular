@@ -7,8 +7,16 @@ body {
   background-color: antiquewhite;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100vh;
+}
+
 .title {
   text-align: center;
+  margin: 0;
 }
 
 .container {

@@ -1,0 +1,14 @@
+.col {
+  width: 100%;
+}
+
+.divRicetta {
+  border: 1px solid lightgrey;
+  height: auto;
+  margin: 2%;
+  padding: 3%;
+}
+
+span {
+  margin-right: 0.2em;
+}

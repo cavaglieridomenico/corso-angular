@@ -1,0 +1,8 @@
+<div class="container">
+  <label for="name">Yuor name</label>
+  <input id="name" type="text" [(ngModel)]="name" />
+  <button type="button" [disabled]="!name" (click)="onReset()">Reaet</button>
+  <button type="button" [disabled]="!name" (click)="name = ''">Reaet</button>
+  <p class="message-to-user">{{ name }}</p>
+  <p class="message-to-user" [innerText]="name"></p>
+</div>
