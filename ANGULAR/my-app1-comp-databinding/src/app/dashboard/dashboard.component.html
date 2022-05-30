@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-12">
+    <h2>Aggiungio una nuova lezione o un nuovo schema lezione</h2>
+    <label for="">Nome Lezione</label>
+    <input type="text" class="form-control" [(ngModel)]="newNomeLezione">
+    <label for="">Contenuto</label>
+    <input type="text" class="form-control" [(ngModel)]="newDescrizioneLezione">
+
+    <br>
+
+    <button class="btn btn-primary" (click)="onAddLezione()">Aggiungi Lezione</button>
+
+    <br>
+
+    <button class="btn btn-success mt-2" (click)="onAddSchema()">Aggiungi Schema</button>
+
+
+  </div>
+</div>
