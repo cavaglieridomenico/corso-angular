@@ -25,9 +25,9 @@
   {{ getComputerStatus() }}
 </p>
 
+<!-- *ngIf -->
 <p *ngIf="computerCreated; else noComputer">
   Il computer è stato creato: {{ computerCreated }}
 </p>
 
-<!-- *ngIf -->
 <ng-template #noComputer>Non è stato creato nessun computer</ng-template>
