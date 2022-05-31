@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Studente } from './prova-input/studente.model';
+import { Lezione } from './lezione.model';
 
 @Component({
   selector: 'app-root',
@@ -8,20 +9,59 @@ import { Studente } from './prova-input/studente.model';
 })
 export class AppComponent {
   title = 'my-app1-comp-databinding';
-  lezioni = [
-    {
-      nome: "Angular",
-      descrizione: "Corso intensivo",
-      type: "Lezione frontale",
-    },
+  messageToUser: string = "";
+  lezioni: Lezione[]  = [
     {
       nome: "Html & CSS",
       descrizione: "Rudimenti",
-      type: "Lezione teorica",
+      type: "Lezione Teorica",
+    },
+    {
+      nome: "Angular",
+      descrizione: "Corso intensivo",
+      type: "Lezione Frontale",
     },
   ]
-  nomiDocenti = ["Dario", "Giovanni", "Danilo"];
 
+  onAddedTeo(data: {nomeLezione: string, contenutoLezione: string}) {
+    this.messageToUser = "";
+
+    if (!data.nomeLezione || !data.contenutoLezione) {
+      console.log("Attenzione, compilare tutti i campi.");
+      this.messageToUser = "Attenzione, compilare tutti i campi."
+      setTimeout(() => this.messageToUser = '', 2000);
+      return;
+    }
+    console.log(data);
+    this.lezioni.push({
+      nome: data.nomeLezione,
+      descrizione: data.contenutoLezione,
+      type: "Lezione Teorica"
+    })
+  }
+
+  onAddedFront(data: {nomeLezione: string, contenutoLezione: string}) {
+    this.messageToUser = "";
+
+    if (!data.nomeLezione || !data.contenutoLezione) {
+      console.log("Attenzione, compilare tutti i campi.")
+      this.messageToUser = "Attenzione, compilare tutti i campi."
+      setTimeout(() => this.messageToUser = '', 2000);
+      return;
+    }
+    console.log(data);
+    this.lezioni.push({
+      nome: data.nomeLezione,
+      descrizione: data.contenutoLezione,
+      type: "Lezione Frontale"
+    })
+  }
+
+
+
+  //------------------------------------------------//
+  //-------------Esempi Input/Output----------------//
+  //-----------------------------------------------//
   cognomiStudenti = ["Cavaglieri", "Morello","Franco"];
   schedeStudenti:Studente[] = [
     {

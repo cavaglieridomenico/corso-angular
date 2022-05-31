@@ -1,28 +1,41 @@
 <div class="container">
-  <app-dashboard></app-dashboard>
+  <app-dashboard
+  (lezTeoCr)="onAddedTeo($event)"
+  (lezFroCr)="onAddedFront($event)"
+  [messageToUser]="messageToUser"
+  ></app-dashboard>
 
   <h2>Lista lezioni</h2>
-  <!-- <app-lezione-element *ngFor="let lezione of lezioni" [element] = "lezione"></app-lezione-element> -->
-  <app-lezione-element *ngFor="let lezione of lezioni" [nomeDelDocente] = "lezione"></app-lezione-element>
 
+  <app-lezione-element
+  *ngFor="let lezione of lezioni"
+  [lezioneEl]="lezione"
+  ></app-lezione-element>
 </div>
-
-<!-- <div class="container">
-  <app-prova-input *ngFor="let nomeDocente of nomiDocenti" [nome] = "nomeDocente"></app-prova-input>
-</div> -->
-<!-- <div class="container">
-  <h2>Lista studenti</h2>
-  <app-prova-input *ngFor="let cognomeStudente of cognomiStudenti" [cognome] = "cognomeStudente"></app-prova-input>
-</div> -->
+<hr>
+<hr>
+<hr>
 
 <!-- ESEMPIO CON OUTPUT -->
 <div class="container">
+  <h2>Esempi Input/Output</h2>
   <app-prova-output (informazione)="onReciveInfo($event)"></app-prova-output>
 </div>
 
 <div class="container">
-
   <app-prova-output (dati)="onRiceveDato($event)" ></app-prova-output>
+</div>
+
+<div class="container"> Due Emitter insieme condue metodi
+  <app-prova-output
+  (informazione)="onReciveInfo($event)"
+  (dati)="onRiceveDato($event)" ></app-prova-output>
+</div>
+
+<div class="container"> Due Emitter insieme con un metodo
+  <app-prova-output
+  (informazione)="onReciveInfo($event)"
+  (dati)="onReciveInfo($event)" ></app-prova-output>
 </div>
 
 <!-- FOR nel component figlio -->

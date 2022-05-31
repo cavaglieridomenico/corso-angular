@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,19 +6,34 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+
+
+@Input() messageToUser: string;
+//Output con Alias
+@Output("lezTeoCr") lezioneCreataTeo = new EventEmitter<{nomeLezione: string, contenutoLezione: string}>();
+
+@Output("lezFroCr") lezioneCreataFront = new EventEmitter<{nomeLezione: string, contenutoLezione: string}>();
+
   newNomeLezione = "";
-  newDescrizioneLezione = "";
+  newDescLezione = "";
+
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-    onAddLezione() {
-      console.log(this.newNomeLezione + " - " + this.newDescrizioneLezione)
+    onAddTeorica() {
+      this.lezioneCreataTeo.emit({
+        nomeLezione: this.newNomeLezione,
+        contenutoLezione: this.newDescLezione
+      })
     }
-    onAddSchema() {
-      console.log(this)
+    onAddFrontale() {
+      this.lezioneCreataFront.emit({
+        nomeLezione: this.newNomeLezione,
+        contenutoLezione: this.newDescLezione
+      })
     }
 
 }
