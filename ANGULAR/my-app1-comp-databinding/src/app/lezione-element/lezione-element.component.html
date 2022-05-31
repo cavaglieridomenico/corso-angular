@@ -1,4 +1,7 @@
-<div>
+<div class="mt-2 p-2"
+[ngClass]="{'bg-primary': element.type === 'Lezione Teorica','bg-success': element.type === 'Lezione Frontale'}"
+
+>
   <h3>{{element.nome}}</h3>
   <p>{{element.descrizione}}</p>
   <p>{{element.type}}</p>

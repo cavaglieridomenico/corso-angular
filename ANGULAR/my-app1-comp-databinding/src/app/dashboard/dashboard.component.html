@@ -2,18 +2,21 @@
   <div class="col-12">
     <h2>Aggiungio una nuova lezione o un nuovo schema lezione</h2>
     <label for="">Nome Lezione</label>
-    <input type="text" class="form-control" [(ngModel)]="newNomeLezione">
+    <input type="text" class="form-control" [(ngModel)]="newNomeLezione"
+    >
     <label for="">Contenuto</label>
-    <input type="text" class="form-control" [(ngModel)]="newDescrizioneLezione">
+    <input type="text" class="form-control" [(ngModel)]="newDescLezione"
+    >
 
     <br>
 
-    <button class="btn btn-primary" (click)="onAddLezione()">Aggiungi Lezione</button>
+    <button class="btn btn-primary" (click)="onAddTeorica()">Aggiungi Lezione Teorica</button>
 
-    <br>
+    <button class="btn btn-success m-2" (click)="onAddFrontale()">Aggiungi Lezione Frontale</button>
 
-    <button class="btn btn-success mt-2" (click)="onAddSchema()">Aggiungi Schema</button>
-
+    <div class="message-to-user">
+      <span>{{messageToUser}}</span>
+    </div>
 
   </div>
 </div>
