@@ -1,21 +1,28 @@
 <div class="container">
   <app-dashboard
-  (lezTeoCr)="onAddedTeo($event)"
-  (lezFroCr)="onAddedFront($event)"
-  [messageToUser]="messageToUser"
+    (lezTeoCr)="onAddedTeo($event)"
+    (lezFroCr)="onAddedFront($event)"
+    [messageToUser]="messageToUser"
   ></app-dashboard>
 
   <h2>Lista lezioni</h2>
 
   <app-lezione-element
-  *ngFor="let lezione of lezioni"
-  [lezioneEl]="lezione"
+    *ngFor="let lezione of lezioni"
+    [lezioneEl]="lezione"
   ></app-lezione-element>
 </div>
-<hr>
-<hr>
-<hr>
 
+<hr />
+<hr />
+<hr />
+<hr />
+<app-esempio-local-ref></app-esempio-local-ref>
+<hr />
+<hr />
+<!-- //------------------------------------------------//
+//---------Altri esempi di Input/Output----------------//
+//-----------------------------------------------// -->
 <!-- ESEMPIO CON OUTPUT -->
 <div class="container">
   <h2>Esempi Input/Output</h2>
@@ -23,30 +30,35 @@
 </div>
 
 <div class="container">
-  <app-prova-output (dati)="onRiceveDato($event)" ></app-prova-output>
+  <app-prova-output (dati)="onRiceveDato($event)"></app-prova-output>
 </div>
 
-<div class="container"> Due Emitter insieme condue metodi
+<div class="container">
+  Due Emitter insieme condue metodi
   <app-prova-output
-  (informazione)="onReciveInfo($event)"
-  (dati)="onRiceveDato($event)" ></app-prova-output>
+    (informazione)="onReciveInfo($event)"
+    (dati)="onRiceveDato($event)"
+  ></app-prova-output>
 </div>
 
-<div class="container"> Due Emitter insieme con un metodo
+<div class="container">
+  Due Emitter insieme con un metodo
   <app-prova-output
-  (informazione)="onReciveInfo($event)"
-  (dati)="onReciveInfo($event)" ></app-prova-output>
+    (informazione)="onReciveInfo($event)"
+    (dati)="onReciveInfo($event)"
+  ></app-prova-output>
 </div>
 
 <!-- FOR nel component figlio -->
 <div class="container">
   <h4>Elenco Studenti</h4>
-  <app-prova-input2 [cognomi] = "cognomiStudenti"></app-prova-input2>
+  <app-prova-input2 [cognomi]="cognomiStudenti"></app-prova-input2>
 </div>
 
 <div class="container">
   <h4>Riepilogo studenti:</h4>
-  <app-prova-input *ngFor="let schedaStudente of schedeStudenti" [elencoSchede] = "schedaStudente"></app-prova-input>
+  <app-prova-input
+    *ngFor="let schedaStudente of schedeStudenti"
+    [elencoSchede]="schedaStudente"
+  ></app-prova-input>
 </div>
-
-
