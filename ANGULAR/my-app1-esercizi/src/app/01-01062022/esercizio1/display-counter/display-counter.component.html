@@ -1,8 +1,8 @@
-<ul>
-  <li
+<div>
+  <p
     *ngFor="let count of countList"
     [ngClass]="{ colored: count.slice(-1) > '5' || count.slice(-2) > '0' }"
   >
     {{ count }}
-  </li>
-</ul>
+  </p>
+</div>
