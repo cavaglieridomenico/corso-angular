@@ -1,0 +1,25 @@
+<div class="row">
+  <h2>Solo local reference</h2>
+  <p>Senza model</p>
+  <div class="col-12">
+    <label>Parola:</label>
+    <input type="text" class="form-control" #parola />
+
+    <button class="btn btn-dark" (click)="onAddParola(parola)">
+      Aggiungi parola
+    </button>
+    <p>{{ newParola }}</p>
+
+    <p>{{ parola.value }}</p>
+    <p></p>
+  </div>
+</div>
+
+<hr />
+<div class="row">
+  <h2>VIEWCHILD</h2>
+  <label>Frase:</label>
+  <input type="text" class="form-control" #frase />
+
+  <button class="btn btn-danger" (click)="onAddFrase()">Aggiungi frase</button>
+</div>

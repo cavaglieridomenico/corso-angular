@@ -8,6 +8,7 @@ import { LezioneElementComponent } from './lezione-element/lezione-element.compo
 import { ProvaInputComponent } from './prova-input/prova-input.component';
 import { ProvaInput2Component } from './prova-input2/prova-input2.component';
 import { ProvaOutputComponent } from './prova-output/prova-output.component';
+import { EsempioLocalRefComponent } from './esempio-local-ref/esempio-local-ref.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ProvaOutputComponent } from './prova-output/prova-output.component';
     LezioneElementComponent,
     ProvaInputComponent,
     ProvaInput2Component,
-    ProvaOutputComponent
+    ProvaOutputComponent,
+    EsempioLocalRefComponent
   ],
   imports: [
     BrowserModule, FormsModule
