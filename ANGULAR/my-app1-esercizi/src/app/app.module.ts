@@ -2,15 +2,15 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { EsercizioComponent } from './01-01062022/esercizio/esercizio.component';
-import { ButtonComponent } from './01-01062022/esercizio/button/button.component';
-import { ParagraphComponent } from './01-01062022/esercizio/paragraph/paragraph.component';
-import { DisplayCounterComponent } from './01-01062022/esercizio/display-counter/display-counter.component';
+import { Esercizio1Component } from './01-01062022/esercizio1/esercizio1.component';
+import { ButtonComponent } from './01-01062022/esercizio1/button/button.component';
+import { ParagraphComponent } from './01-01062022/esercizio1/paragraph/paragraph.component';
+import { DisplayCounterComponent } from './01-01062022/esercizio1/display-counter/display-counter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EsercizioComponent,
+    Esercizio1Component,
     ButtonComponent,
     ParagraphComponent,
     DisplayCounterComponent,
