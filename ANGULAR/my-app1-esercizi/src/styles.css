@@ -7,3 +7,19 @@ body {
   text-align: center;
   margin-bottom: 1.7em;
 }
+
+.esercizio {
+  background-color: aqua;
+  padding: 2em;
+  border: solid 2px blue;
+  margin-top: 1em;
+}
+
+.inner-container {
+  margin: 0 auto 3em;
+  max-width: 800px;
+}
+
+button.large {
+  width: 250px;
+}
