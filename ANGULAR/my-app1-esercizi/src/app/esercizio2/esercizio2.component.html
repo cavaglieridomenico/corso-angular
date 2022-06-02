@@ -1,0 +1,10 @@
+<div class="esercizio">
+  <h1 class="title">Esercizio 2</h1>
+  <app-game-control (interval)="onReciveCounter($event)"></app-game-control>
+  <div class="inner-container">
+    <div *ngFor="let number of numbers">
+      <app-dispari *ngIf="number % 2 !== 0"></app-dispari>
+      <app-pari *ngIf="number % 2 === 0"></app-pari>
+    </div>
+  </div>
+</div>
