@@ -1,0 +1,32 @@
+<div class="row mt-3">
+  <div class="col-md-6 offset-md-3">
+    <div class="card p-2">
+      <p class="card-title">Nome: {{ userData.nome }}</p>
+      <p class="card-text">Ruolo: {{ userData.tipoUtente }}</p>
+      <p class="card-text">{{ userData.status | uppercase }}</p>
+      <div class="buttons">
+        <button
+          [disabled]="userData.status === 'active'"
+          class="btn btn-primary"
+          (click)="onClick1()"
+        >
+          Active
+        </button>
+        <button
+          class="btn btn-primary mx-1"
+          [disabled]="userData.status === 'inactive'"
+          (click)="onClick2()"
+        >
+          Inactive
+        </button>
+        <button
+          class="btn btn-primary"
+          [disabled]="userData.status === 'hidden'"
+          (click)="onClick3()"
+        >
+          Hidden
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
