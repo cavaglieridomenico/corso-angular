@@ -1,0 +1,12 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.bi {
+  cursor: pointer;
+}
+
+.card-text {
+  font-size: 1.5em;
+}

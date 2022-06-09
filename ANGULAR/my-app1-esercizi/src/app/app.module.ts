@@ -10,6 +10,8 @@ import { Esercizio2Component } from './esercizio2/esercizio2.component';
 import { PariComponent } from './esercizio2/pari/pari.component';
 import { DispariComponent } from './esercizio2/dispari/dispari.component';
 import { GameControlComponent } from './esercizio2/game-control/game-control.component';
+import { Esercizio3Component } from './esercizio3/esercizio3.component';
+import { RecensioneComponent } from './esercizio3/recensione/recensione.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { GameControlComponent } from './esercizio2/game-control/game-control.com
     PariComponent,
     DispariComponent,
     GameControlComponent,
+    Esercizio3Component,
+    RecensioneComponent,
   ],
   imports: [BrowserModule],
   providers: [],

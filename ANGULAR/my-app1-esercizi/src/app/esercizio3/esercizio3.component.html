@@ -1,0 +1,59 @@
+<div class="esercizio">
+  <h1 class="title">Esercizio 3</h1>
+
+  <div class="inner-container">
+    <h2>Vota le foto più belle!</h2>
+    <ol>
+      <li class="istruzioni">Dai un titolo alla tua foto</li>
+      <li class="istruzioni">
+        Inserisci il link della tua galleria oppure usa l'indirizzo proposto
+      </li>
+      <li class="istruzioni">
+        Inserisci il link dell'immagine da votare oppure usa l'indirizzo
+        proposto (prova a cambiare id per ottenere nuove foto: ad esempio
+        picsum.photos/id/<span class="photo-id">238</span>/300/200)
+      </li>
+      <li class="istruzioni">
+        vota...<strong> e che vinca la foto migliore!</strong>
+      </li>
+    </ol>
+    <div class="col-12">
+      <label>Nome:</label>
+      <input type="text" class="form-control" #nome />
+      <label>Link:</label>
+      <input
+        type="text"
+        class="form-control"
+        value="https://picsum.photos/"
+        #link
+      />
+      <label>Immagine:</label>
+      <input
+        type="text"
+        class="form-control"
+        value="https://picsum.photos/id/237/300/200"
+        #immagine
+      />
+      <div class="d-flex justify-content-between mt-4">
+        <button
+          class="btn btn-primary small"
+          (click)="onSubmit(nome, link, immagine)"
+        >
+          Aggiungi
+        </button>
+        <button
+          class="btn btn-success small"
+          (click)="onWin()"
+          [disabled]="recensioni.length === 0"
+        >
+          Vincitore
+        </button>
+      </div>
+      <p class="message-to-user mt-4">{{ message }}</p>
+      <app-recensione
+        *ngFor="let recensione of recensioni"
+        [recensioneUtente]="recensione"
+      ></app-recensione>
+    </div>
+  </div>
+</div>

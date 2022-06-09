@@ -1,0 +1,31 @@
+<div class="inner-container mt-4">
+  <div class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img
+          src="{{ element.image }}"
+          class="img-fluid rounded-start"
+          alt="Immagine non disponibile..."
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">
+            Titolo: <em>{{ element.title }}</em>
+          </h5>
+          <p class="card-text">
+            Link:
+            <a target="_blank" href="{{ element.link }}">
+              <em>{{ element.link }}</em>
+            </a>
+          </p>
+          <div class="card-text">
+            <i class="bi bi-hand-thumbs-up" (click)="onVoteUp()"></i>
+            <span class="voti mx-3">{{ element.voti }}</span>
+            <i class="bi bi-hand-thumbs-down" (click)="onVoteDown()"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

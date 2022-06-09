@@ -9,6 +9,7 @@ import { Lezione } from '../shared/lezione.model';
 export class DashboardComponent implements OnInit {
   @Input() messageToUser: string;
   //Output con Alias
+
   @Output('lezTeoCr') lezioneCreataTeo = new EventEmitter<Lezione>();
 
   @Output('lezFroCr') lezioneCreataFront = new EventEmitter<{
