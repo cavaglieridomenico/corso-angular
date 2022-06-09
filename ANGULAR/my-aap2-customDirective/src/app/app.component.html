@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <!-- <ul class="list-group">
+        <li *ngFor="let number of numbers" *ngIf="">{{ number }} </li>
+      </ul> -->
+      <ul class="list-group">
+        <div *ngIf="soloPari">
+          <li
+            class="list-group-item"
+            [ngClass]="{ pari: number % 2 === 0 }"
+            [ngStyle]="{
+              backgroundColor: number % 2 !== 0 ? 'yellow' : 'transparent'
+            }"
+            *ngFor="let number of numbers"
+          >
+            {{ number }}
+          </li>
+        </div>
+      </ul>
+
+      <hr />
+      <h2 appHightlightBase>Applico allo sfondo la mia direttiva</h2>
+      <h2 appHighlightIntermedio>Directive intermedio</h2>
+      <h2 appHighlightAvanzato>Directive Avanzato</h2>
+      <h2 appHighlightAvanzato2>Directive Avanzato 2</h2>
+      <h2 appHighlightAvanzato3 [coloreDef]="'yellow'" [coloreHigh]="'purple'">
+        Colore avanzato 3
+      </h2>
+      <div [ngSwitch]="value">
+        <p *ngSwitchCase="5">Il valore è 5</p>
+        <p *ngSwitchDefault>Nessun valore</p>
+      </div>
+    </div>
+  </div>
+</div>
