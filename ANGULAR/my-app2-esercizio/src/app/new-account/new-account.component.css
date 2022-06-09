@@ -1,0 +1,8 @@
+.form-container {
+  border: solid 1px navy;
+  padding: 3em 2em;
+}
+
+.form-control {
+  border: solid 1px navy;
+}

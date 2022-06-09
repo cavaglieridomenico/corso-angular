@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-md-6 offset-md-3 form-container">
+    <div class="mb-3">
+      <label for="name">Nome</label>
+      <input type="text" class="form-control" #nome value="Mario Rossi" />
+    </div>
+    <div class="mb-3">
+      <label for="tipo">Tipo utente</label>
+      <input type="text" class="form-control" #tipoUtente value="Admin" />
+    </div>
+    <div class="mb-3">
+      <label for="status">Status</label>
+      <select #status class="form-control">
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+        <option value="hidden">Hidden</option>
+      </select>
+    </div>
+    <button
+      class="btn btn-success"
+      type="button"
+      (click)="onSubmitItems(nome, tipoUtente, status)"
+    >
+      Submit
+    </button>
+  </div>
+</div>
