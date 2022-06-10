@@ -1,0 +1,7 @@
+<p>log-data</p>
+<li *ngFor="let user of utenze">{{ user.nome }} _ tipo: {{ user.tipo }}</li>
+<hr />
+<button (click)="addUserLog()">Aggiungi</button>
+<button (click)="modUserType()">Cambia tipo</button>
+
+<h4>{{ superUser.nome }} {{ superUser.tipo }}</h4>
