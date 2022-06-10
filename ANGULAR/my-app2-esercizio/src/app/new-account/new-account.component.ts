@@ -20,6 +20,6 @@ export class NewAccountComponent implements OnInit {
     status: HTMLInputElement
   ) {
     this.singoloUtente = new Utente(nome.value, tipoUtente.value, status.value);
-    this.utenteService.utentiService.push(this.singoloUtente);
+    this.utenteService.updateUtentiService(this.singoloUtente);
   }
 }

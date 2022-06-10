@@ -5,7 +5,7 @@ import { Utente } from 'src/app/shared/user.model';
   providedIn: 'root',
 })
 export class UtenteService {
-  utentiService = [];
+  utentiService: Utente[] = [];
 
   condividiDati() {
     console.log(this.utentiService);

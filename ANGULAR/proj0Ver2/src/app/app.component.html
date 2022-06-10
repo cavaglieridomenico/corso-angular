@@ -1,0 +1,19 @@
+<app-header (paginaSelezionta)="onNaviga($event)"></app-header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div>
+        <app-shopping-list *ngIf="paginaSelezionata === 'shopping-list'"
+          >Shopping List</app-shopping-list
+        >
+      </div>
+      <div>
+        <app-ricette *ngIf="paginaSelezionata === 'ricetta'"
+          >Ricetta</app-ricette
+        >
+      </div>
+    </div>
+  </div>
+  <app-carrello></app-carrello>
+</div>
