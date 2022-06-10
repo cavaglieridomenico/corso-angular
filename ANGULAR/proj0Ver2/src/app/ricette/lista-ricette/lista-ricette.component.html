@@ -1,0 +1,11 @@
+<h2>Le nostre ricette</h2>
+
+<div class="col">
+  <div class="divRicetta">
+    <app-item-ricetta
+      *ngFor="let ricettaEl of ricette"
+      [ricetta]="ricettaEl"
+      (ricettaSelezionata)="onRicettaSelezionata(ricettaEl)"
+    ></app-item-ricetta>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-12">
+    <h2>Compila il form per i tuoi ingredienti</h2>
+    <div class="row">
+      <div class="mb-3">
+        <label for="nome">Nome Ing:</label>
+        <input type="text" name="nome" class="form-control" #nomeIng />
+      </div>
+      <div class="mb-3">
+        <label for="quant" class="form-label">Quantità</label>
+        <input type="number" name="quant" class="form-control" #quant />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <button
+          class="btn btn-primary"
+          (click)="addIngredienti(nomeIng, quant)"
+        >
+          Aggiungi
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

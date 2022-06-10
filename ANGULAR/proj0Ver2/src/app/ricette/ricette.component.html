@@ -1,0 +1,16 @@
+<h1>App Ricette</h1>
+
+<div class="col-6">
+  <app-lista-ricette
+    (ricettaFuSelezionata)="ricettaSelez = $event"
+  ></app-lista-ricette>
+</div>
+
+<div class="col-6">
+  <app-dettaglio-ricette
+    *ngIf="ricettaSelez; else noInfo"
+    [ricetta]="ricettaSelez"
+  ></app-dettaglio-ricette>
+
+  <ng-template #noInfo>Selezionare una ricetta.</ng-template>
+</div>
