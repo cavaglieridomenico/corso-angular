@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { RicettaService } from 'src/app/shared/ricetta.service';
 import { Ricetta } from '../../ricetta.model';
 
 @Component({
@@ -11,11 +12,11 @@ export class ItemRicettaComponent implements OnInit {
   //Sono slegati!
   @Output() ricettaSelezionata = new EventEmitter<void>();
 
-  constructor() {}
+  constructor(private ricettaService: RicettaService) {}
 
   ngOnInit(): void {}
 
   onSelected() {
-    this.ricettaSelezionata.emit();
+    this.ricettaService.ricettaSelezionata.emit(this.ricetta);
   }
 }

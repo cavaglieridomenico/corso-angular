@@ -1,2 +1,36 @@
 <p>{{ ricetta.nome }}</p>
 <p>{{ ricetta.descrizione }}</p>
+<div class="row">
+  <div class="col-12">
+    <ul>
+      <li *ngFor="let ingrediente of ricetta.ingredienti">
+        {{ ingrediente.nome }} - quant: {{ ingrediente.quant }}
+      </li>
+    </ul>
+    <div class="dropdown" appDropdown>
+      <button
+        class="btn btn-primary dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton1"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Modifica ricetta
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li>
+          <a href="#" class="dropdown-item" (click)="onAddToShoppingList()"
+            >Aggiungi a lista spesa</a
+          >
+        </li>
+        <li><a href="#" class="dropdown-item">Aggiorna ricetta</a></li>
+        <li><a href="#" class="dropdown-item">Elimina ricetta ricetta</a></li>
+      </ul>
+      <!-- <button class="btn btn-primary" (click)="onAddToShoppingList()">
+        Aggiungi alla lista della spesa
+      </button>
+      <button class="btn btn-warning">Aggiorna ricetta</button>
+      <button class="btn btn-danger">Elimina ricetta ricetta</button> -->
+    </div>
+  </div>
+</div>

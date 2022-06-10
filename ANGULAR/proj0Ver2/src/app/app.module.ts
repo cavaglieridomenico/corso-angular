@@ -9,6 +9,8 @@ import { DettaglioRicetteComponent } from './ricette/dettaglio-ricette/dettaglio
 import { ItemRicettaComponent } from './ricette/lista-ricette/item-ricetta/item-ricetta.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
+import { CarrelloComponent } from './carrello/carrello.component';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
     ItemRicettaComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
+    CarrelloComponent,
+    DropdownDirective,
   ],
   imports: [BrowserModule],
   providers: [],
