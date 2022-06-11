@@ -7,9 +7,10 @@ import { UtenteComponent } from './utente/utente.component';
 import { VisibleComponent } from './visible/visible.component';
 import { HiddenComponent } from './hidden/hidden.component';
 import { InactiveComponent } from './inactive/inactive.component';
+import { UserContainerComponent } from './user-container/user-container.component';
 
 @NgModule({
-  declarations: [AppComponent, NewAccountComponent, UtenteComponent, VisibleComponent, HiddenComponent, InactiveComponent],
+  declarations: [AppComponent, NewAccountComponent, UtenteComponent, VisibleComponent, HiddenComponent, InactiveComponent, UserContainerComponent],
   imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],

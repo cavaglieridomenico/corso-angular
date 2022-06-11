@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Utente } from '../shared/user.model';
-import { UtenteService } from '../utente/shared/utente.service';
+import { UtenteService } from '../shared/utente.service';
 
 @Component({
   selector: 'app-visible',
@@ -15,7 +15,6 @@ export class VisibleComponent implements OnInit {
         utenteService.utentiService,
         'active'
       );
-      console.log(this.listaUtenti);
     });
   }
 
