@@ -15,7 +15,6 @@ export class HiddenComponent implements OnInit {
         utenteService.utentiService,
         'hidden'
       );
-      console.log(this.listaUtenti);
     });
   }
 

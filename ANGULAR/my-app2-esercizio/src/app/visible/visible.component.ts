@@ -15,7 +15,6 @@ export class VisibleComponent implements OnInit {
         utenteService.utentiService,
         'active'
       );
-      console.log(this.listaUtenti);
     });
   }
 

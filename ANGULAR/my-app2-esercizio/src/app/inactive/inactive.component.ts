@@ -15,7 +15,6 @@ export class InactiveComponent implements OnInit {
         utenteService.utentiService,
         'inactive'
       );
-      console.log(this.listaUtenti);
     });
   }
 
