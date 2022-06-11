@@ -2,4 +2,8 @@
   width: 33%;
   text-align: center;
   background-color: aqua;
+  border-radius: 7px;
+  min-width: 170px;
+  min-height: 300px;
+  margin: 0.75em auto 0;
 }
