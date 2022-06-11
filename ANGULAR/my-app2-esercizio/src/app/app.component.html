@@ -6,8 +6,20 @@
     </div>
   </div>
   <div class="d-flex justify-content-between mt-4">
-    <app-visible></app-visible>
-    <app-inactive></app-inactive>
-    <app-hidden></app-hidden>
+    <app-user-container
+      [title]="'Active'"
+      [status]="'active'"
+      class="user-container"
+    ></app-user-container>
+    <app-user-container
+      [title]="'Inactive'"
+      [status]="'inactive'"
+      class="user-container"
+    ></app-user-container>
+    <app-user-container
+      [title]="'Hidden'"
+      [status]="'hidden'"
+      class="user-container"
+    ></app-user-container>
   </div>
 </div>
