@@ -1,0 +1,27 @@
+<h2>Lista server</h2>
+<div class="row">
+  <div class="col-12">
+    <div class="list-group">
+      <a
+        href="#"
+        class="list-group-item"
+        *ngFor="let server of servers"
+        [routerLink]="['/servers', server.id]"
+      >
+        {{ server.id }} - {{ server.nome }} - {{ server.status }}
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+<!-- Esempio renderizzazione base 
+  <button class="btn btn-warning mx-2">
+  <a href="#" routerLink="./server">Mostra singolo server</a>
+</button>
+<button class="btn btn-alert">
+  <a href="#" routerLink="./edit">Modifica singolo server</a>
+</button>
+<router-outlet></router-outlet> -->

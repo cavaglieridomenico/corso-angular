@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-12">
+    <div class="list-group">
+      <a
+        href=""
+        class="list-group-item"
+        [routerLink]="['/users', mioUtente.id, mioUtente.nome]"
+        *ngFor="let mioUtente of users"
+        >{{ mioUtente.id }} - {{ mioUtente.nome }}</a
+      >
+    </div>
+  </div>
+</div>
+
+<div class="col-12 mt-5">
+  Dettaglio singolo Utente
+  <router-outlet></router-outlet>
+</div>
