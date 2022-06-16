@@ -1,0 +1,86 @@
+<div class="container">
+  <div class="col-12">
+    <h1>Compila il form Reactive</h1>
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <div formGroupName="userData">
+        <div class="mb-3">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            class="form-control"
+            formControlName="username"
+          />
+        </div>
+
+        <p
+          class="alert alert-danger"
+          *ngIf="
+            !signupForm.get('userData.username').valid &&
+            signupForm.get('userData.username').touched
+          "
+        >
+          Non hai inserito il name
+        </p>
+
+        <p
+          class="alert alert-danger"
+          *ngIf="
+            signupForm.get('userData.username').errors &&
+            signupForm.get('userData.username').errors['nomeIsProibito']
+          "
+        >
+          Stai usando un nome proibito
+        </p>
+
+        <div class="mb-3">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            id="email"
+            class="form-control"
+            formControlName="email"
+          />
+        </div>
+        <p
+          class="alert alert-danger"
+          *ngIf="
+            !signupForm.get('userData.email').valid &&
+            signupForm.get('userData.email').touched
+          "
+        >
+          Non hai inserito una mail valida
+        </p>
+        <p
+          class="alert alert-danger"
+          *ngIf="
+            signupForm.get('userData.email').errors &&
+            signupForm.get('userData.email').errors['emailIsProibita']
+          "
+        >
+          Hai inserito una mail proibita
+        </p>
+      </div>
+
+      <div class="form-check mb-3" *ngFor="let gen of genere">
+        <input
+          type="radio"
+          class="form-check-input"
+          [value]="gen"
+          formControlName="genere"
+        />{{ gen }}
+        <label class="form-check-label" for="answer"> </label>
+      </div>
+      <p class="alert alert-danger" *ngIf="!signupForm.get('genere').valid">
+        Non hai selezionato il genere
+      </p>
+      <button
+        [disabled]="!signupForm.valid"
+        class="btn btn-primary"
+        type="submit"
+      >
+        Invia
+      </button>
+    </form>
+  </div>
+</div>
