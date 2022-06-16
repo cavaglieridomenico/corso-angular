@@ -20,6 +20,19 @@
       </ul>
 
       <hr />
+      <app-title
+        appUnderscore
+        [ngStyle]="{ 'background-color': 'yellow' }"
+        [ngClass]="{ pari: true }"
+      ></app-title>
+      <h2
+        [ngStyle]="{ 'background-color': 'yellow' }"
+        [ngClass]="{ pari: true }"
+        appUnderscore
+      >
+        Applico underscore
+      </h2>
+
       <h2 appHightlightBase>Applico allo sfondo la mia direttiva</h2>
       <h2 appHighlightIntermedio>Directive intermedio</h2>
       <h2 appHighlightAvanzato>Directive Avanzato</h2>
