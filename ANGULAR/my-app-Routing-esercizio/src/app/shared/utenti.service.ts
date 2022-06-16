@@ -33,7 +33,11 @@ export class UtentiService {
     return this.contatti;
   }
 
+  isIncludedUtente(listaUtenti: Utente[], utente: Utente) {
+    return listaUtenti.includes(utente);
+  }
+
   setContattiUpdate(utente: Utente) {
-    !this.contatti.includes(utente) && this.contatti.push(utente);
+    this.contatti.push(utente);
   }
 }

@@ -10,6 +10,7 @@ import { UtentiService } from 'src/app/shared/utenti.service';
 })
 export class UtenteComponent implements OnInit {
   utente: Utente;
+  isIncludedUtente: boolean;
   constructor(
     private utentiService: UtentiService,
     private route: ActivatedRoute,
@@ -18,7 +19,13 @@ export class UtenteComponent implements OnInit {
 
   ngOnInit(): void {
     const id = +this.route.snapshot.params['id'];
-    this.utente = this.utentiService.getUserById(id);
+    const currentUtente = this.utentiService.getUserById(id);
+    this.utente = currentUtente;
+
+    this.isIncludedUtente = this.utentiService.isIncludedUtente(
+      this.utentiService.getContatti(),
+      currentUtente
+    );
 
     this.route.params.subscribe((params: Params) => {
       this.utente = this.utentiService.getUserById(+params['id']);
