@@ -1,0 +1,93 @@
+<div class="container">
+  <h1>Form da compilare e validare</h1>
+  <div class="row">
+    <div class="col-12">
+      <form #signUpForm="ngForm" (submit)="onSubmit(signUpForm)">
+        <div class="mb-3">
+          <label for="emailAbbonamento" class="form-label">Email:</label>
+          <input
+            type="email"
+            id="emailAbbonamento"
+            class="form-control"
+            ngModel
+            name="emailAbbonamento"
+            required
+            email
+            #emailAbbonamento="ngModel"
+          />
+        </div>
+        <p
+          class="alert alert-warning"
+          *ngIf="!emailAbbonamento.valid && emailAbbonamento.touched"
+        >
+          Il formato della mail non è corretto
+        </p>
+
+        <div class="mb-3">
+          <label class="form-label" for="tipoAbbonamento"
+            >Tipo abbonamento:</label
+          >
+          <select
+            id="tipoAbbonamento"
+            class="form-control"
+            [ngModel]="tipoAbbonamentoDefault"
+            name="tipoAbbonamento"
+            #tipoAbbonamento="ngModel"
+            required
+          >
+            <option value="base">Base</option>
+            <option value="premium">Premium</option>
+            <option value="gold">Gold</option>
+          </select>
+        </div>
+        <p
+          class="alert alert-warning"
+          *ngIf="!tipoAbbonamento.valid && tipoAbbonamento.touched"
+        >
+          Selezionare un tipo di abbonamento
+        </p>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password:</label>
+          <input
+            type="password"
+            id="password"
+            class="form-control"
+            ngModel
+            name="password"
+            required
+            #password="ngModel"
+            minlength="5"
+          />
+        </div>
+        <p
+          class="alert alert-warning"
+          *ngIf="!password.valid && password.touched"
+        >
+          Inserire una password di almeno 5 caratteri
+        </p>
+        <button
+          class="btn btn-primary"
+          type="submit"
+          [disabled]="!signUpForm.valid"
+        >
+          Invia
+        </button>
+        <button
+          class="btn btn-warning ms-2"
+          type="button"
+          (click)="onSuggerisci()"
+        >
+          Suggerisci
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="row mt-4" *ngIf="submitted">
+    <div class="col-6">
+      <h3>Ecco i dati dell'account:</h3>
+      <p>Email: {{ account.emailAbbonamento }}</p>
+      <p>Tipo di abbonamento: {{ account.tipoAbbonamento }}</p>
+      <p>Password: {{ account.password }}</p>
+    </div>
+  </div>
+</div>
