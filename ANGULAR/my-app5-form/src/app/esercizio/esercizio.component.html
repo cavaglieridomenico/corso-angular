@@ -1,0 +1,101 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>Form</h1>
+      <form [formGroup]="corsiForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="nomeCorso">Nome corso</label>
+          <input
+            type="text"
+            id="nomeCorso"
+            class="form-control"
+            formControlName="nomeCorso"
+            #nomeCorso
+          />
+        </div>
+        <p
+          class="alert alert-danger"
+          *ngIf="
+            !corsiForm.get('nomeCorso').valid &&
+            corsiForm.get('nomeCorso').touched
+          "
+        >
+          Si prega di inserire il nome del corso
+        </p>
+        <p
+          class="alert alert-danger"
+          *ngIf="
+            corsiForm.get('nomeCorso').errors &&
+            corsiForm.get('nomeCorso').errors['nomeIsProibito']
+          "
+        >
+          Questo nome è proibito
+        </p>
+
+        <div class="mb-3">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            class="form-control"
+            formControlName="email"
+            #email
+          />
+        </div>
+        <p
+          class="alert alert-danger"
+          *ngIf="
+            !corsiForm.get('email').valid && corsiForm.get('email').touched
+          "
+        >
+          Si prega di inserire una mail valida
+        </p>
+        <div class="mb-3">
+          <label class="form-label" for="statoCorso">Stato corso</label>
+          <select
+            id="statoCorso"
+            class="form-control"
+            formControlName="statoCorso"
+            #statoCorso
+          >
+            <option value="In corso">In corso</option>
+            <option value="Da iniziare">Da iniziare</option>
+            <option value="Terminato">Terminato</option>
+          </select>
+        </div>
+        <p class="alert alert-warning" *ngIf="">Selezionare un tipo di corso</p>
+        <div class="mb-3">
+          <label for="cap">CAP</label>
+          <input
+            type="number"
+            id="cap"
+            class="form-control"
+            formControlName="cap"
+            #cap
+          />
+        </div>
+        <p
+          class="alert alert-danger"
+          *ngIf="!corsiForm.get('cap').valid && corsiForm.get('cap').touched"
+        >
+          Si prega di inserire il nome del corso
+        </p>
+        <button
+          class="btn btn-primary"
+          type="submit"
+          [disabled]="!corsiForm.valid"
+        >
+          Invia
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="row mt-4" *ngIf="submitted">
+    <div class="col-6">
+      <h3>Ecco i dati del corso:</h3>
+      <p>Nome corso: {{ nomeCorso.value }}</p>
+      <p>Email: {{ email.value }}</p>
+      <p>Stato del corso: {{ statoCorso.value }}</p>
+    </div>
+  </div>
+</div>
