@@ -3,12 +3,9 @@
   <div class="col-12 list-group">
     <div class="list-group-item my-2" *ngFor="let utente of utenti">
       <p style="font-size: 1.5em">{{ utente.nome }}</p>
-      <a href="#" class="" [routerLink]="['/utenti', utente.id]">
+      <a class="" [routerLink]="['/contatti', utente.id]">
         <button class="btn btn-primary">Aggiungi ai contatti</button>
       </a>
     </div>
   </div>
-</div>
-<div class="container">
-  <router-outlet></router-outlet>
 </div>
