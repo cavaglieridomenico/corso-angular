@@ -7,6 +7,8 @@ import { HighlightIntermedioDirective } from './highlight-intermedio/highlight-i
 import { HighlightAvanzatoDirective } from './highlight-avanzato/highlight-avanzato.directive';
 import { HighlightAvanzato2Directive } from './highlight-avanzato2/highlight-avanzato2.directive';
 import { HighlightAvanzato3Directive } from './hightlight-avanzato3/highlight-avanzato3.directive';
+import { UnderscoreDirective } from './underscore/underscore.directive';
+import { TitleComponent } from './title/title.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { HighlightAvanzato3Directive } from './hightlight-avanzato3/highlight-av
     HighlightAvanzatoDirective,
     HighlightAvanzato2Directive,
     HighlightAvanzato3Directive,
+    UnderscoreDirective,
+    TitleComponent,
   ],
   imports: [BrowserModule],
   providers: [],
