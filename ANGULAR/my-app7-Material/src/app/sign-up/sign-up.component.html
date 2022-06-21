@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-12">
+    <section style="margin-bottom: 30px">
+      <h2>Compila il form</h2>
+      <form #mioForm="ngForm" (submit)="onSubmit(mioForm)">
+        <mat-form-field>
+          <mat-label>Email:</mat-label>
+          <input
+            type="email"
+            placeholder="example@mail.com"
+            matInput
+            ngModel
+            name="email"
+            #emailInput="ngModel"
+            required
+            email
+          />
+        </mat-form-field>
+        <mat-error *ngIf="emailInput.hasError('required')"
+          >La mail è obbligatoria</mat-error
+        >
+        <mat-error *ngIf="emailInput.invalid">La mail non è valida</mat-error>
+        <br />
+        <mat-form-field hintLabel="Ricordi la password?">
+          <input
+            type="password"
+            matInput
+            placeholder="password"
+            ngModel
+            name="password"
+            #pwInput="ngModel"
+            minlength="6"
+          />
+          <mat-hint align="end">{{ pwInput.value?.length }}/6</mat-hint>
+          <mat-error *ngIf="pwInput.value?.length === 0"
+            >Allora sei di coccio!</mat-error
+          >
+        </mat-form-field>
+        <button mat-button color="primary" type="submit">Invia</button>
+      </form>
+    </section>
+  </div>
+</div>
